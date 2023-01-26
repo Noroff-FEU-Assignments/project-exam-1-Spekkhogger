@@ -1,3 +1,15 @@
 /*This stylesheet contains the style of the bloglist.html*/
 /*Styles that do not apply to the bloglist page should be moved either to style.css or the css file with the correct name*/
 /*Applies for code for all screen sizes*/
+
+#bottom-nav-archive {
+    background-image: url("../images/pexels-jane-doan-1099680 Medium.jpeg");
+    background-color: white;
+    background-size: 100%;
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    opacity: 90%;
+    margin: 0em 2em;
+    padding: 4rem;
+}
+
