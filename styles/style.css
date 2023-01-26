@@ -1,3 +1,111 @@
 /*This stylesheet contain the universal style and the style of the index.html*/
 /*CSS code that applies speficially to the other HTML pages should be written in the css file with the pagename*/
 /*Applies for code for all screen sizes*/
+
+:root {
+    --main-white: #F7F7F7;
+    --font-color-black: #262626;
+    --green: #778A47;
+    --blue: #7B8A99;
+}
+
+* {
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    margin: 0;
+    padding: 0;
+}
+
+/*Fonts and text*/
+h1 {
+    font-family: 'Cinzel', serif;
+}
+
+h2 {
+    font-family: 'Cinzel', serif;
+}
+
+a {
+    font-family: 'Avenir Next', arial, helvetica;
+}
+
+p {
+    font-family: 'Avenir Next', arial, helvetica;
+}
+
+
+/*Header content*/
+/*Navigation*/
+nav ul li a {
+    text-decoration: none;
+    color: var(--font-color-black);
+}
+
+nav ul li a:hover {
+    text-decoration: underline 2px solid var(--green);
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.active {
+    text-decoration: underline 2px dotted;
+}
+
+#top-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5em 2em 0em;
+}
+
+/*Logo*/
+#logo-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 1em 2em 0.3em;
+}
+#logo-image {
+    max-width: 15em;
+}
+
+/*Icons*/
+#icon-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+#icon-wrap i {
+    font-size: 2.1em;
+    color: var(--green);
+}
+
+#icon-wrap a i:hover {
+    color: var(--blue);
+}
+
+/*Background image homepage*/
+#bottom-nav {
+    background-image: url("../images/rachel-park-hrlvr2ZlUNk-unsplash Large.jpeg");
+    background-color: white;
+    background-size: 100%;
+    background-position: 40% 40%;
+    background-repeat: no-repeat;
+    opacity: 80%;
+    margin: 0em 2em;
+    padding: 10rem;
+}
+
+
+
+
+
+/*Media screens start*/
+/**/
