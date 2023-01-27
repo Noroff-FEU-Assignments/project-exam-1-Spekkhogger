@@ -35,16 +35,16 @@ p {
 
 /*Header content*/
 /*Navigation*/
-nav ul li a {
+nav a {
     text-decoration: none;
     color: var(--font-color-black);
 }
 
-nav ul li a:hover {
+nav a:hover {
     text-decoration: underline 2px solid var(--green);
 }
 
-nav ul li {
+nav li {
     list-style-type: none;
 }
 
