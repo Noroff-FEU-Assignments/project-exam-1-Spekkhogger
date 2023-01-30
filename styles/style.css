@@ -126,7 +126,7 @@ nav ul {
     display: grid;
     gap: 1rem;
     grid-auto-flow: column;
-    grid-auto-columns: 22%;
+    grid-auto-columns: 21%;
     overflow-x: auto;
 }
 
@@ -135,13 +135,14 @@ nav ul {
     min-width: 100%;
     height: 50%;
     object-fit: cover;
+    
 }
 
 .slider-card {
     box-shadow: 1px 1px 6px lightgray, -1px -1px 8px lightgray;
 }
 
-.slider-card h3 {
+.slider-card h3 { 
     padding: 0.4rem;
 }
 

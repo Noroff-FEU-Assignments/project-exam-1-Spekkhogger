@@ -1,7 +1,7 @@
-const url = "http://localhost:8888/wp-json/wp/v2/posts?_embed";
+const url = "http://localhost:8888/wp-json/wp/v2/posts?per_page=100&_embed";
 const slider = document.querySelector(".latest-blog-slider"); 
 
-
+const allData = []; 
 
 
 
@@ -11,17 +11,18 @@ const getData = async() => {
         const data = await response.json();
 
         for (let i = 0; i < data.length; i++) {
+            allData.push(data[i]);
             const blogID = data[i]["id"];
             const blogTitle = data[i]["title"]["rendered"];
             const blogImage = data[i]["_embedded"]["wp:featuredmedia"][0]["source_url"];
-            console.log(blogTitle); 
+            // console.log(blogTitle); 
             
          
-            slider.innerHTML += `<div class="slider-card">
-            <img src="${blogImage}">
-            <h3>${blogTitle}</h3>
-            </div>
-            `;
+            // slider.innerHTML += `<div class="slider-card">
+            // <img src="${blogImage}">
+            // <h3>${blogTitle}</h3>
+            // </div>
+            // `;
 
         }
         
@@ -34,6 +35,6 @@ const getData = async() => {
 }
 
 
-
+console.log(allData);
 
 getData();
