@@ -2,6 +2,10 @@
 /*Styles that do not apply to the bloglist page should be moved either to style.css or the css file with the correct name*/
 /*Applies for code for all screen sizes*/
 
+header {
+    border-bottom: 1px solid black;
+}
+
 .contact-text-wrap {
     display: flex;
     flex-direction: column;
