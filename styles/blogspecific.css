@@ -5,3 +5,19 @@
 header {
     border-bottom: 1px solid black;
 }
+
+
+
+/*Content*/
+
+.blog-post-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em 10em;
+}
+
+.post-content p{
+    padding: 1em 0em;
+}
+

@@ -17,7 +17,7 @@ const getData = async() => {
             container.innerHTML += `
             <div class="archive-post-wrap"> 
                 <div class="archive-image"> 
-                    <a href="#"><img src="${blogImage}" alt="${blogImageAlt}"></a>
+                    <a href="blogspecific.html?post=${blogID}"><img src="${blogImage}" alt="${blogImageAlt}"></a>
                 </div>
                 <div class="archive-txt"> 
                     <h2> ${blogTitle} </h2>
