@@ -30,14 +30,14 @@ const fetchBlog = async() => {
 
         pageContainer.innerHTML = `
             <h1> ${blogTitle} </h1>
-            <p>${dateCreated}</p>
+            <p class="date">${dateCreated}</p>
             <img src="${blogImage}">
             <div class="post-content">
                 ${content}
             </div>
             <div class="post-info">
-                <p>${dateModified}</p>
-                <p>${author}</p>
+                <p class="date">Last modified: ${dateModified}</p>
+                <p class="date">Author: ${author}</p>
             </div>
         `;
 
