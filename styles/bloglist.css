@@ -18,3 +18,38 @@ main {
     margin: 0em 2em;
     padding: 4rem;
 }
+
+/*Content on page*/
+
+.archive-wrap {
+    margin: 1em 4em;
+}
+
+.archive-post-wrap {
+    display: flex;
+    box-shadow: 1px 1px 6px lightgray, -1px -1px 8px lightgray;
+    margin: 2em 0em;
+    max-width: 75%;
+    cursor: pointer;
+}
+
+.archive-post-wrap:hover {
+    box-shadow: 1px 1px 6px gray, -1px -1px 8px gray;
+}
+
+.archive-image {
+    min-width: 30%;
+    max-height: 10em;
+}
+
+.archive-image img {
+    object-fit: cover;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+}
+
+.archive-txt {
+    padding: 1em;
+}
