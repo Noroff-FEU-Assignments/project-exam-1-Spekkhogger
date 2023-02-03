@@ -9,7 +9,7 @@ const blogPostPath = params.get("post");
 
 console.log(blogPostPath); 
 
-const url = "http://sanna.codes/wp-json/wp/v2/posts/" + blogPostPath + "?_embed";
+const url = "https://sanna.codes/wp-json/wp/v2/posts/" + blogPostPath + "?_embed";
 
 console.log(url)
 
