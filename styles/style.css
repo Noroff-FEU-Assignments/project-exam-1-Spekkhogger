@@ -125,12 +125,22 @@ nav ul {
 
 
 /*The front-page slider*/
+
+.index-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.index-container h2 {
+    margin: 1.5em 0em 0em;
+}
+
 .latest-blog-slider{
-    display: grid;
-    gap: 1rem;
-    grid-auto-flow: column;
-    grid-auto-columns: 21%;
-    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-height: 250px;
 }
 
 .slider-card img {
@@ -138,26 +148,38 @@ nav ul {
     min-width: 100%;
     height: 50%;
     object-fit: cover;
-    
 }
 
 .slider-card {
     box-shadow: 1px 1px 6px lightgray, -1px -1px 8px lightgray;
+    max-height: 100%;
+    max-width: 20%;
 }
 
-.slider-card h3 { 
-    padding: 0.4rem;
+.slider-card a {
+    text-decoration: none;
+    color: var(--font-color-black);
 }
 
 .karusell-wrap {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin: 2em;
 }
 
-.karusell-wrap h2{
-    margin: 1em 0em 1em;
+.slider-button .fa-solid {
+    font-size: 26pt;
+    background-color: white;
+    color: var(--font-color-black);
+}
+
+.slider-button {
+    border: none;
+}
+
+.slider-button:hover {
+    cursor: pointer;
 }
 
 
