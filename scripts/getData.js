@@ -1,4 +1,4 @@
-const url = "http://localhost:8888/wp-json/wp/v2/posts?per_page=100&_embed";
+const url = "http://sanna.codes/wp-json/wp/v2/posts?per_page=100&_embed";
 const container = document.querySelector(".archive-wrap"); 
 
 const getData = async() => {

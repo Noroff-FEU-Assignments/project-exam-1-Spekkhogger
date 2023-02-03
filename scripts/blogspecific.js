@@ -9,7 +9,7 @@ const blogPostPath = params.get("post");
 
 console.log(blogPostPath); 
 
-const url = "http://localhost:8888/wp-json/wp/v2/posts/" + blogPostPath + "?_embed";
+const url = "http://sanna.codes/wp-json/wp/v2/posts/" + blogPostPath + "?_embed";
 
 console.log(url)
 
@@ -26,6 +26,16 @@ const fetchBlog = async() => {
         const dateModified = blogData["modified"];
         const author = blogData["_embedded"]["author"][0]["name"];
 
+        // console.log(content);
+
+        const ingred = content.split("</ul>")[0];
+        const stepByStep = content.split("</ul>")[1];
+        const breadText = content.split("<p>")[1];
+
+        console.log(breadText);
+
+        // console.log(ingred);
+
         pageTitle.innerHTML = `${blogTitle}`;
 
         pageContainer.innerHTML = `
@@ -33,7 +43,12 @@ const fetchBlog = async() => {
             <p class="date">${dateCreated}</p>
             <img src="${blogImage}">
             <div class="post-content">
-                ${content}
+                <div class="ingred">
+                    ${ingred}
+                </div>
+                <div class="step-by-step">
+                    ${stepByStep}  
+                </div>
             </div>
             <div class="post-info">
                 <p class="date">Last modified: ${dateModified}</p>
