@@ -27,8 +27,7 @@ const getSlider = async() => {
                     <a href="blogspecific.html?post=${blogID}"><h2>${blogTitle}</h2></a>
                 </div>
             </div>
-            `
-
+            ` 
         }
     }
 

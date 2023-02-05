@@ -2,16 +2,10 @@ const pageTitle = document.querySelector("title");
 const pageContainer = document.querySelector(".blog-post-container");
 
 const queryString = document.location.search;
-
 const params = new URLSearchParams(queryString);
-
 const blogPostPath = params.get("post");
 
-console.log(blogPostPath); 
-
 const url = "https://sanna.codes/wp-json/wp/v2/posts/" + blogPostPath + "?_embed";
-
-console.log(url)
 
 const fetchBlog = async() => {
     try {
@@ -33,7 +27,6 @@ const fetchBlog = async() => {
         const breadText = content.split("<p>")[1];
 
         console.log(breadText);
-
         // console.log(ingred);
 
         pageTitle.innerHTML = `${blogTitle}`;
@@ -41,7 +34,9 @@ const fetchBlog = async() => {
         pageContainer.innerHTML = `
             <h1> ${blogTitle} </h1>
             <p class="date">${dateCreated}</p>
-            <img src="${blogImage}">
+            <div class="content-image">
+                <img src="${blogImage}" alt="${blogImageAlt}" class="image">
+            </div>
             <div class="post-content">
                 <div class="ingred">
                     ${ingred}
@@ -64,3 +59,4 @@ const fetchBlog = async() => {
 }
 
 fetchBlog();
+

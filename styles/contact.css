@@ -1,16 +1,28 @@
 /*This stylesheet contains the style of the contact.html*/
 /*Styles that do not apply to the bloglist page should be moved either to style.css or the css file with the correct name*/
 /*Applies for code for all screen sizes*/
+:root {
+    --main-white: #F7F7F7;
+    --font-color-black: #262626;
+    --green: #778A47;
+    --blue: #7B8A99;
+}
+
+
 
 header {
     border-bottom: 1px solid black;
 }
 
-main {
-    background-image: url("../images/pexels-shvets-production-7195271 Medium.jpeg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    padding: 10rem;
+::placeholder {
+    font-family: 'Avenir Next', arial, helvetica;
+    padding: 1em;
+}
+
+.form-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact-text-wrap {
@@ -19,6 +31,49 @@ main {
     align-items: center;
     margin-top: 4em;
     background-color: white;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 2em;
+}
+
+#contact-form label {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Avenir Next', arial, helvetica;
+    line-height: 150%;
+}
+
+.dot {
+    min-width: 20px;
+    min-height: 20px;
+    max-height: 20px;
+    max-width: 20px;
+    border-radius: 50%;
+    align-self: center;
+    background-color: green;
+    margin: 1em;
+    display: none;
+    position: absolute;
+    right: 27%;
+}
+
+#contact-form input {
+    min-width: 30em;
+    min-height: 3em;
+    /* border-radius: 10px; */
+    border: none;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#send {
+    padding: 10px 25px;
+    font-family: 'Avenir Next', arial, helvetica;
+    
 }
 
 

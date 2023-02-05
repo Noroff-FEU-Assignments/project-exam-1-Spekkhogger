@@ -1,0 +1,14 @@
+.large-image {
+    position: absolute; 
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 999;
+}
+
+.sotet {
+    z-index: -1;
+    background-color: black;
+    opacity: 50%;
+    min-height: 100%;
+    min-width: 100%;
+}

@@ -49,3 +49,7 @@ ul li {
 .step-by-step {
     background-color: #7B8A99;
 }
+
+.content-image {
+    background: red;
+}
