@@ -1,5 +1,7 @@
 const pageTitle = document.querySelector("title"); 
 const pageContainer = document.querySelector(".blog-post-container");
+const headingPost = document.querySelector(".post-heading");
+const imagePost = document.querySelector(".post-image");
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -12,6 +14,7 @@ const fetchBlog = async() => {
         const response = await fetch(url);
         const blogData = await response.json();
         console.log(blogData);
+
         const blogTitle = blogData["title"]["rendered"];
         const blogImage = blogData["_embedded"]["wp:featuredmedia"][0]["source_url"];
         const blogImageAlt = blogData["_embedded"]["wp:featuredmedia"][0]["alt_text"];
@@ -31,12 +34,18 @@ const fetchBlog = async() => {
 
         pageTitle.innerHTML = `${blogTitle}`;
 
+        headingPost.innerHTML = `
+        <h1> ${blogTitle} </h1>
+        <p class="date">${dateCreated}</p>
+        `
+
+        imagePost.innerHTML = `
+        <div class="content-image">
+            <img src="${blogImage}" alt="${blogImageAlt}" class="image">
+        </div>
+        `
+
         pageContainer.innerHTML = `
-            <h1> ${blogTitle} </h1>
-            <p class="date">${dateCreated}</p>
-            <div class="content-image">
-                <img src="${blogImage}" alt="${blogImageAlt}" class="image">
-            </div>
             <div class="post-content">
                 <div class="ingred">
                     ${ingred}
@@ -50,6 +59,8 @@ const fetchBlog = async() => {
                 <p class="date">Author: ${author}</p>
             </div>
         `;
+
+
 
 
     } catch (error) {

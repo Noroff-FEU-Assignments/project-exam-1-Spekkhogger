@@ -16,7 +16,6 @@ header {
 
 ::placeholder {
     font-family: 'Avenir Next', arial, helvetica;
-    padding: 1em;
 }
 
 .form-wrap {
@@ -43,30 +42,9 @@ header {
 
 #contact-form label {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-family: 'Avenir Next', arial, helvetica;
     line-height: 150%;
-}
-
-.dot {
-    min-width: 20px;
-    min-height: 20px;
-    max-height: 20px;
-    max-width: 20px;
-    border-radius: 50%;
-    align-self: center;
-    margin: 1em;
-    display: none;
-    position: absolute;
-    right: 27%;
-}
-
-.green {
-    background-color: green;
-}
-
-.red {
-    background-color: red;
 }
 
 #contact-form input {
@@ -74,13 +52,19 @@ header {
     min-height: 3em;
     /* border-radius: 10px; */
     border: none;
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.3);
+    padding: 1em;
 }
 
 #send {
     padding: 10px 25px;
     font-family: 'Avenir Next', arial, helvetica;
     
+}
+
+.error {
+    color: darkred;
+    margin-top: 1em;
 }
 
 

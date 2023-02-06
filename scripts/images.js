@@ -1,16 +1,29 @@
-// const images = document.querySelector(".image"); 
-// const background = document.querySelector("main"); 
-
-// function largeImage(){
-//     images.classList.add("large-image");
-//     background.classList.add("sotet"); 
-// }
-
-// function smallImage(){
-//     images.classList.remove("large-image"); 
-//     background.classList.remove("sotet");
-// }
+const images = document.querySelector(".post-image"); 
+const modal = document.querySelector(".modal"); 
+const modalImage = document.querySelector(".modalImage");
+var clickCounter = 0; 
 
 
-// images.addEventListener("click", largeImage); 
-// window.addEventListener("click", smallImage); 
+function largeImage(){
+    count();
+    images.classList.add("large-image");
+    modal.style.display = "block"
+}
+
+function count(){
+    clickCounter++; 
+}
+
+function smallImage(){
+    modal.style.display = "none"
+    images.classList.remove("large-image");
+}
+
+
+images.addEventListener("click", largeImage); 
+
+if (clickCounter === 2) 
+{document.addEventListener("click", smallImage)};
+
+
+console.log(clickCounter); 
