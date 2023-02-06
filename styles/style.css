@@ -136,12 +136,20 @@ nav ul {
     margin: 1.5em 0em 0em;
 }
 
-.latest-blog-slider{
+
+/*The sliders*/
+.latest-blog-slider1, .latest-blog-slider2{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     min-height: 250px;
 }
+
+.latest-blog-slider2 {
+    display: none;
+}
+
+
 
 .slider-card img {
     max-width: 100%;
@@ -168,6 +176,8 @@ nav ul {
     margin: 2em;
 }
 
+
+/*Slider Buttons*/
 .slider-button .fa-solid {
     font-size: 26pt;
     background-color: white;
@@ -176,6 +186,10 @@ nav ul {
 
 .slider-button {
     border: none;
+}
+
+.left {
+    opacity: 0%;
 }
 
 .slider-button:hover {
