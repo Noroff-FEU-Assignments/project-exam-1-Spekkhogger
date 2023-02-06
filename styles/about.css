@@ -20,11 +20,43 @@ main {
 }
 
 .about-content-wrap {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     margin-top: 2em;
+    justify-content: center;
+    margin: 1em 10em 5em;
 }
 
-.about-text-wrap {
-    max-width: 30rem;
-    padding: 0 1rem;
+.about-imag img{
+    max-height: 30em;
+}
+
+.about-text-wrap p{
+    padding-bottom: 1em;
+}
+
+
+@media screen and (max-width: 768px) {
+    main {
+        margin: 1em 1em;
+    }
+
+    #about-page-logo{
+        max-width: 100%;
+    }
+
+    .about-content-wrap {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .about-text-wrap{
+        margin: 1em 0em 1em;
+        padding: 0; 
+    }
+
+
+
 }
