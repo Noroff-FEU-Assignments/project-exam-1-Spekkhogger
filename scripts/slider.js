@@ -4,6 +4,9 @@ const sliderDivFirst = document.querySelector(".latest-blog-slider1");
 const sliderDivSec = document.querySelector(".latest-blog-slider2");
 const rigthButton = document.querySelector(".rigth");
 const leftButton = document.querySelector(".left");
+const rigthBall = document.querySelector(".rigth-ball");
+const leftBall = document.querySelector(".left-ball");
+
 
 const getSlider = async() => {
     try {
@@ -60,16 +63,22 @@ getSlider();
 function slideRight(){
     sliderDivFirst.style.display = "none";
     rigthButton.style.opacity = "0%";
+    rigthBall.style.opacity = "100%";
     sliderDivSec.style.display = "flex";
     leftButton.style.opacity = "100%";
+    leftBall.style.opacity = "30%";
 }
 function slideLeft(){
     sliderDivFirst.style.display = "flex";
     rigthButton.style.opacity = "100%";
     sliderDivSec.style.display = "none";
     leftButton.style.opacity = "0%";
+    leftBall.style.opacity = "100%";
+    rigthBall.style.opacity = "30%";
 }
 
 
 rigthButton.addEventListener("click", slideRight);
 leftButton.addEventListener("click", slideLeft);
+leftBall.addEventListener("click", slideLeft);
+rigthBall.addEventListener("click", slideRight);

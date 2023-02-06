@@ -207,6 +207,11 @@ nav ul {
     height: 20px;
     border-radius: 50%;
     background-color: var(--blue);
+    cursor: pointer;
+}
+
+.rigth-ball {
+    opacity: 30%;
 }
 
 
