@@ -48,3 +48,16 @@ ul li {
 
 /*Media screens*/
 
+@media screen and (max-width: 768px) {
+    
+    .blog-container {
+        margin: 1em 0.3em 10em;
+    }
+
+
+
+
+
+
+
+}
