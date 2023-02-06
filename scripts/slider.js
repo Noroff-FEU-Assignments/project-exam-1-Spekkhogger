@@ -13,6 +13,7 @@ const getSlider = async() => {
         const response = await fetch(url); 
         const data = await response.json();
         console.log(data);
+        sliderDivFirst.innerHTML = "";
 
         for (let i = 0; i < 4; i++) {
             const blogID = data[i]["id"];
