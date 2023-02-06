@@ -79,6 +79,7 @@ header {
 
     #contact-form input {
         min-width: 25em;
+        border: 1px solid darkgray; 
     }
 
 }
