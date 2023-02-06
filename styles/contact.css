@@ -69,3 +69,16 @@ header {
 
 
 
+/*Media screens*/
+
+@media screen and (max-width: 768px) {
+
+    .form-wrap {
+        margin: 0em 3rem;
+    }
+
+    #contact-form input {
+        min-width: 25em;
+    }
+
+}
