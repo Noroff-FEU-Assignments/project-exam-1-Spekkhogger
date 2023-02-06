@@ -149,8 +149,6 @@ nav ul {
     display: none;
 }
 
-
-
 .slider-card img {
     max-width: 100%;
     min-width: 100%;
@@ -174,6 +172,10 @@ nav ul {
     flex-direction: row;
     align-items: center;
     margin: 2em;
+}
+
+.slider-card-text {
+    
 }
 
 
@@ -265,5 +267,24 @@ nav ul {
         display: none;
     }
 
+    /*Slider*/
+    .latest-blog-slider1 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+    .slider-button {
+        display: none;
+    }
+    
+    .slider-card {
+        max-height: 20em;
+        max-width: 45%;
+        min-width: 40%;
+    }
+    
+    .karusell-wrap {
+        margin: 1em;
+    }
 
 }
