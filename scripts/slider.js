@@ -28,6 +28,9 @@ const getSlider = async() => {
                 <div class="slider-card-text">
                     <a href="blogspecific.html?post=${blogID}"><h2>${blogTitle}</h2></a>
                 </div>
+                <div class="slider-card-button">
+                    <a href="blogspecific.html?post=${blogID}"><p>Read more -></p></a>
+                </div>
             </div>
             ` 
         }

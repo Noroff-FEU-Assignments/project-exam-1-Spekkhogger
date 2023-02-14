@@ -19,18 +19,19 @@ const fetchBlog = async() => {
         const blogImage = blogData["_embedded"]["wp:featuredmedia"][0]["source_url"];
         const blogImageAlt = blogData["_embedded"]["wp:featuredmedia"][0]["alt_text"];
         const content = blogData["content"]["rendered"];
-        const dateCreated = blogData["date"];
-        const dateModified = blogData["modified"];
+        const dateCreated = blogData["date"].split("T")[0];
+        const dateModified = blogData["modified"].split("T")[0];
         const author = blogData["_embedded"]["author"][0]["name"];
 
         // console.log(content);
 
         const ingred = content.split("</ul>")[0];
         const stepByStep = content.split("</ul>")[1];
-        const breadText = content.split("<p>")[1];
+        const breadTextOne = content.split("<p>")[1];
+        const breadTextTwo = content.split("<p>")[2];
+        const imageInText = content.split("src=")[1];
 
-        console.log(breadText);
-        // console.log(ingred);
+        console.log(imageInText);
 
         pageTitle.innerHTML = `${blogTitle}`;
 
@@ -47,11 +48,24 @@ const fetchBlog = async() => {
 
         pageContainer.innerHTML = `
             <div class="post-content">
-                <div class="ingred">
-                    ${ingred}
+                <div class="top-content-blog">
+                    <div class="blog-text">
+                        <p>${breadTextOne}</p>
+                        <p>${breadTextTwo}</p>
+                    </div>
+                    <div class="ingred">
+                        <h2>Ingredients</h2>
+                        ${ingred}
+                    </div>
                 </div>
-                <div class="step-by-step">
-                    ${stepByStep}  
+                <div class="bottom-content-blog">
+                    <div class="step-by-step">
+                        <h2>Step-by-step</h2>
+                        ${stepByStep}  
+                    </div>
+                    <div class="image-in-text">
+                        <img src=${imageInText}>
+                    </div>
                 </div>
             </div>
             <div class="post-info">
@@ -59,7 +73,6 @@ const fetchBlog = async() => {
                 <p class="date">Author: ${author}</p>
             </div>
         `;
-
 
 
 

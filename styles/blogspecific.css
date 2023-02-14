@@ -36,13 +36,50 @@ ul li {
     margin-top: 2em;
 }
 
+.post-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-content-blog, .bottom-content-blog {
+    display: flex;
+    margin-top: 2em;
+}
+
 .ingred {
-    background-color: #778A47;
+    border: 5px dotted #778A47;
+    padding: 1.2em 2.5em;
+    min-width: 35%;
+}
+
+.ingred ul li{
+    list-style-type: inherit; 
+    padding: 2px;
 }
 
 .step-by-step {
-    background-color: #7B8A99;
+    padding: 2em;
 }
+
+.step-by-step ul li{
+    list-style-type: decimal;
+    padding: 2px;
+}
+
+.blog-text {
+    padding: 1.2em; 
+}
+
+.blog-text p {
+    margin-bottom: 1.2em;
+}
+
+.image-in-text {
+    color: white;
+    max-width: 50%;
+    overflow: hidden;
+}
+
 
 
 
