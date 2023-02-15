@@ -7,7 +7,7 @@ const getData = async() => {
         const data = await response.json();
         console.log(data);
 
-        for (let i = 0; i < data.length; i++) {
+        for (let i = 0; i < 10; i++) {
             const blogID = data[i]["id"];
             const blogTitle = data[i]["title"]["rendered"];
             const blogImage = data[i]["_embedded"]["wp:featuredmedia"][0]["source_url"];
@@ -23,9 +23,50 @@ const getData = async() => {
                     <h2> ${blogTitle} </h2>
                     <p> ${excerpt} </p>
                 </div>
+                <div class="read-more-link">
+                    <a href="blogspecific.html?post=${blogID}">Read more...</a>
+                </div>
             </div>
             `;
         }
+
+        setTimeout (function loadMore (){
+            for (let i = 10; i < data.length; i++) {
+                const blogID = data[i]["id"];
+                const blogTitle = data[i]["title"]["rendered"];
+                const blogImage = data[i]["_embedded"]["wp:featuredmedia"][0]["source_url"];
+                const blogImageAlt = data[i]["_embedded"]["wp:featuredmedia"][0]["alt_text"];
+                const excerpt = data[i]["excerpt"]["rendered"];
+                
+                container.innerHTML += `
+                <div class="archive-post-wrap"> 
+                    <div class="archive-image"> 
+                        <a href="blogspecific.html?post=${blogID}"><img src="${blogImage}" alt="${blogImageAlt}"></a>
+                    </div>
+                    <div class="archive-txt"> 
+                        <h2> ${blogTitle} </h2>
+                        <p> ${excerpt} </p>
+                    </div>
+                    <div class="read-more-link">
+                        <a href="blogspecific.html?post=${blogID}">Read more...</a>
+                    </div>
+                </div>
+                `;
+            }
+        }, 2000);
+
+        const infiniteScroll = () => {
+                if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight){
+                    console.log("end reached");
+                    loadMore();
+                    window.removeEventListener("scroll", infiniteScroll);
+                }
+        };
+
+        window.addEventListener("scroll", infiniteScroll);
+
+
+
     }
 
     catch(error) {
@@ -33,5 +74,7 @@ const getData = async() => {
     
     }
 }
+
+
 
 getData();

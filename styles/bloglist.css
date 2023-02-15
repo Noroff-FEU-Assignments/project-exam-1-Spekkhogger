@@ -53,3 +53,11 @@ main {
 .archive-txt {
     padding: 1em;
 }
+
+.read-more-link {
+    text-decoration: none;
+    color: black;
+    flex-wrap: nowrap;
+    padding: 0.2em;
+    align-self: flex-end;
+}
