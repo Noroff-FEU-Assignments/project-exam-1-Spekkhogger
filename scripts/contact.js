@@ -30,7 +30,7 @@ function showConfirmation (input, error, number) {
         error.innerHTML = ``;
     } else {
         confirmCounter = 0;
-        error.innerHTML = `<p>Must be at least ${number} long</p>`; 
+        error.innerHTML = `<p>Must be at least ${number} characters long</p>`; 
     }
 }
 
@@ -50,7 +50,7 @@ function formValidation(event){
     }
 
     if (confirmCounter >= 4) {
-        form.innerHTML = "<p>Your message has been sent! Thank you</p>";
+        form.innerHTML = "<p>Thank you! Your message has been sent.</p>";
     }
 
 }

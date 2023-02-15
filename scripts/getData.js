@@ -12,7 +12,7 @@ const getData = async() => {
             const blogTitle = data[i]["title"]["rendered"];
             const blogImage = data[i]["_embedded"]["wp:featuredmedia"][0]["source_url"];
             const blogImageAlt = data[i]["_embedded"]["wp:featuredmedia"][0]["alt_text"];
-            const excerpt = data[i]["excerpt"]["rendered"];
+            const excerpt = data[i]["excerpt"]["rendered"].slice(0, 200) + "  [...]";
             
             container.innerHTML += `
             <div class="archive-post-wrap"> 
@@ -20,7 +20,7 @@ const getData = async() => {
                     <a href="blogspecific.html?post=${blogID}"><img src="${blogImage}" alt="${blogImageAlt}"></a>
                 </div>
                 <div class="archive-txt"> 
-                    <h2> ${blogTitle} </h2>
+                    <a href="blogspecific.html?post=${blogID}"><h2> ${blogTitle} </h2></a>
                     <p> ${excerpt} </p>
                 </div>
                 <div class="read-more-link">
@@ -36,7 +36,7 @@ const getData = async() => {
                 const blogTitle = data[i]["title"]["rendered"];
                 const blogImage = data[i]["_embedded"]["wp:featuredmedia"][0]["source_url"];
                 const blogImageAlt = data[i]["_embedded"]["wp:featuredmedia"][0]["alt_text"];
-                const excerpt = data[i]["excerpt"]["rendered"];
+                const excerpt = data[i]["excerpt"]["rendered"].slice(0, 200) + "  [...]";
                 
                 container.innerHTML += `
                 <div class="archive-post-wrap"> 
@@ -44,7 +44,7 @@ const getData = async() => {
                         <a href="blogspecific.html?post=${blogID}"><img src="${blogImage}" alt="${blogImageAlt}"></a>
                     </div>
                     <div class="archive-txt"> 
-                        <h2> ${blogTitle} </h2>
+                        <a href="blogspecific.html?post=${blogID}"><h2> ${blogTitle} </h2></a>
                         <p> ${excerpt} </p>
                     </div>
                     <div class="read-more-link">
