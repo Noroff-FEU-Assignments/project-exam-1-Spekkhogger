@@ -58,6 +58,9 @@ a {
 
 .archive-txt {
     padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 

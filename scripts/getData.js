@@ -44,9 +44,7 @@ const getData = async() => {
                     <div class="archive-txt"> 
                         <a href="blogspecific.html?post=${blogID}"><h2> ${blogTitle} </h2></a>
                         <p> ${excerpt} </p>
-                    </div>
-                    <div class="read-more-link">
-                        <a href="blogspecific.html?post=${blogID}">Read more...</a>
+                        <a href="blogspecific.html?post=${blogID}" class="read-more-link">Read more...</a>
                     </div>
                 </div>
                 `;

@@ -31,7 +31,7 @@ const fetchBlog = async() => {
         const breadTextTwo = content.split("<p>")[2];
         const imageInText = content.split("src=")[1];
 
-        console.log(imageInText);
+        console.log(stepByStep);
 
         pageTitle.innerHTML = `${blogTitle}`;
 
