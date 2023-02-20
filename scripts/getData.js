@@ -1,5 +1,6 @@
 const url = "https://sanna.codes/wp-json/wp/v2/posts?per_page=100&_embed";
 const container = document.querySelector(".archive-wrap"); 
+const loadMoreButton = document.querySelector(".load-more")
 
 const getData = async() => {
     try {
@@ -28,7 +29,7 @@ const getData = async() => {
             `;
         }
 
-        setTimeout (function loadMore (){
+        function loadMore (){
             for (let i = 10; i < data.length; i++) {
                 const blogID = data[i]["id"];
                 const blogTitle = data[i]["title"]["rendered"];
@@ -49,17 +50,15 @@ const getData = async() => {
                 </div>
                 `;
             }
-        }, 2000);
-
-        const infiniteScroll = () => {
-                if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight){
-                    console.log("end reached");
-                    loadMore();
-                    window.removeEventListener("scroll", infiniteScroll);
-                }
         };
 
-        window.addEventListener("scroll", infiniteScroll);
+        const loadMoreFun = () => {
+                    console.log("end reached");
+                    loadMore();    
+                    loadMoreButton.style.display = "none" ;
+        };
+
+        loadMoreButton.addEventListener("click", loadMoreFun);
 
 
 

@@ -23,17 +23,31 @@ a {
     color: #262626;
 }
 
-/*Content on page*/
+.archive-container {
+    display: flex;
+    gap: 1em;
+    margin: 3em 6em;
 
-.archive-wrap {
-    margin: 1em 4em;
 }
+
+.load-more-button button {
+    background-color: white;
+    border: 2px solid #778A47;
+    cursor: pointer;
+}
+.load-more-button button:hover {
+    background-color: #778A47;
+    border: 2px solid #778A47;
+    color: white;
+}
+
+/*Content on page*/
 
 .archive-post-wrap {
     display: flex;
     box-shadow: 1px 1px 6px lightgray, -1px -1px 8px lightgray;
-    margin: 2em 0em;
-    max-width: 75%;
+    margin-bottom: 2em;
+    min-width: 70%;
     min-height: 12em;
     max-height: 12em;
 }
@@ -61,6 +75,16 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+
+/*Category/search function*/
+.catergori-wrap {
+    min-width: 20%;
+    max-width: 25%;
+    min-height: 10px;
+    max-height: 40px;
+    border: 5px dotted #778A47;
 }
 
 
