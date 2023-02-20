@@ -16,6 +16,10 @@
     padding: 0;
 }
 
+body {
+    min-height: 100vh;
+}
+
 /*Fonts and text*/
 h1, h2, h3 {
     font-family: 'Cinzel', serif;
@@ -36,9 +40,12 @@ p {
 }
 
 button {
-    padding: 0.5em 1.3em;
+    padding: 10px 23px;
     border-radius: 5px;
     letter-spacing: 1.5pt;
+    background-color: white;
+    font-family: 'Avenir Next', arial, helvetica;
+    cursor: pointer;
 }
 
 
@@ -77,6 +84,9 @@ nav ul {
 .hamburger {
     display: none;
     gap: 0.3em;
+    position: fixed;
+    background-color: white;
+    z-index: 999;
 }
 
 .hamburger p {
@@ -245,6 +255,7 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1.5em;
 }
 
 

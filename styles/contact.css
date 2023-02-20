@@ -8,8 +8,6 @@
     --blue: #7B8A99;
 }
 
-
-
 header {
     border-bottom: 1px solid black;
 }
@@ -57,7 +55,6 @@ header {
 }
 
 #send {
-    padding: 10px 25px;
     font-family: 'Avenir Next', arial, helvetica;
     
 }
@@ -67,7 +64,13 @@ header {
     margin-top: 1em;
 }
 
-
+#send {
+    border: 2px solid #7B8A99;
+}
+#send:hover {
+    background-color: #7B8A99;
+    color: white;
+}
 
 /*Media screens*/
 

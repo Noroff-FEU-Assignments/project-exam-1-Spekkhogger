@@ -31,13 +31,10 @@ a {
 }
 
 .load-more-button button {
-    background-color: white;
     border: 2px solid #778A47;
-    cursor: pointer;
 }
 .load-more-button button:hover {
     background-color: #778A47;
-    border: 2px solid #778A47;
     color: white;
 }
 
