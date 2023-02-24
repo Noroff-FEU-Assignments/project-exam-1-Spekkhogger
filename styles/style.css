@@ -200,7 +200,7 @@ nav ul {
 .slider-card-button {
     display: flex;
     justify-content: center;
-    
+    margin-top: 40px;
 }
 
 
@@ -242,7 +242,52 @@ nav ul {
 }
 
 
+/*Subrsciption box*/
+.subscribe {
+    background-image: url(/images/pexels-shvets-production-7195271\ Medium.jpeg);
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-width: 80%;
+    min-height: 400px;
+    margin: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.subscribe-content {
+    background-color: rgba(255, 255, 255, 75%);
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 2em;
+}
+
+#subscribe-input {
+    min-width: 20em;
+    min-height: 3em;
+    /* border-radius: 10px; */
+    border: none;
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.3);
+    padding: 1em;
+}
+
+.input-container button {
+    border: none;
+    background-color: var(--green);
+    color: white;
+    min-height: 3em;
+}
+
+.input-container button:hover {
+    background-color: white;
+    color: var(--green);
+    border: 1px solid var(--green);
+}
 
 /*Footer*/
 
@@ -318,13 +363,22 @@ nav ul {
     }
     
     .slider-card {
-        max-height: 20em;
+        max-height: 100%;
+        min-height: 20em;
         max-width: 45%;
         min-width: 40%;
+    }
+
+    .slider-card h2{
+        font-size: 15pt;
     }
     
     .karusell-wrap {
         margin: 1em;
+    }
+
+    .smoll {
+        display: none;
     }
 
 }
