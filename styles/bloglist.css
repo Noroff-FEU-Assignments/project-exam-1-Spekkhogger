@@ -99,8 +99,33 @@ a {
         flex-direction: column;
         margin: 1em 0em;
         max-width: 100%;
+        min-height: 12%;
     }
+    .archive-image {
+        min-width: 100%;
+        max-width: 100%;
+        max-height: 50%;
+        min-height: 50%;
+    }
+
+    .archive-wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
     .archive-txt p{
+        display: none;
+    }
+    .archive-container {
+        margin: 0em;
+    }
+
+
+
+
+
+    .catergori-wrap {
         display: none;
     }
 

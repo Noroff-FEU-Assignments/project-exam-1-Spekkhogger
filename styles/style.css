@@ -312,6 +312,10 @@ nav ul {
 
     .hamburger {
         display: flex;
+        width: 100%;
+    }
+    #logo-wrap {
+        margin-top: 40px;
     }
     .nav-list {
         position: fixed;
@@ -381,4 +385,23 @@ nav ul {
         display: none;
     }
 
+
+
+    /*Subscription box*/
+    .subscribe {
+        min-height: 300px;
+        margin: 1em;
+    }
+    
+    .subscribe-content {
+        max-width: 90%;
+        gap: 10px;
+        padding: 1em;
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 }
