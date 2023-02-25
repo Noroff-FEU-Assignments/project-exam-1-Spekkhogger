@@ -74,6 +74,14 @@ a {
     justify-content: space-around;
 }
 
+.archive-txt a{
+    text-decoration: none;
+}
+
+.read-more-link a{
+    border-bottom: 1px solid black;
+}
+
 
 /*Category/search function*/
 .catergori-wrap {
@@ -92,6 +100,15 @@ a {
 /*Media screens*/
 
 @media screen and (max-width: 768px) {
+    .archive-container {
+        margin: 0em 0em 50em;
+        flex: 1;
+    }
+
+    footer {
+        flex: 2;
+    }
+
     .archive-wrap {
         margin: 1em 1em;
     }
@@ -116,9 +133,6 @@ a {
 
     .archive-txt p{
         display: none;
-    }
-    .archive-container {
-        margin: 0em;
     }
 
 

@@ -18,6 +18,8 @@
 
 body {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /*Fonts and text*/
@@ -292,6 +294,7 @@ nav ul {
 /*Footer*/
 
 .footer-wrap {
+    align-self: flex-end;
     min-width: 100%;
     min-height: 4em;
     padding: 2em;
@@ -404,4 +407,9 @@ nav ul {
         flex-direction: column;
         gap: 10px;
     }
+
+
+
+    /*Footer*/
+
 }
