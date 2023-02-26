@@ -92,8 +92,9 @@ a {
     border: 5px dotted #778A47;
 }
 
-
-
+.catergori-wrap {
+    display: none;
+}
 
 
 
@@ -139,8 +140,5 @@ a {
 
 
 
-    .catergori-wrap {
-        display: none;
-    }
 
 }
