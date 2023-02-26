@@ -64,7 +64,7 @@ const fetchBlog = async() => {
                         ${stepByStep}  
                     </div>
                     <div class="image-in-text">
-                        <img src=${imageInText}>
+                        <img src=${imageInText} class="image">
                     </div>
                 </div>
             </div>
@@ -74,6 +74,28 @@ const fetchBlog = async() => {
             </div>
         `;
 
+
+
+        const images = document.querySelector(".image");
+        const modal = document.querySelector(".modal"); 
+        const modalImage = document.querySelector(".img-in-modal");
+
+        images.addEventListener("click", function(event){
+            if (event.target.tagName === "IMG") {
+                const src = event.target.getAttribute("src");
+                modalImage.setAttribute("src", src);
+                modal.style.display = "block"
+
+                window.addEventListener("click", closeModal);
+            }
+        })
+
+        function closeModal(event) {
+            if (event.target == modal) {
+                modal.style.display = "none"
+                window.removeEventListener("click", closeModal)
+            }
+        }
 
 
     } catch (error) {
