@@ -97,6 +97,7 @@ The page and URL is hosted by Netlify.
 ## Getting started
 ### Installing
 1. Clone the repo: 
+https://github.com/Noroff-FEU-Assignments/project-exam-1-Spekkhogger.git
 
 ### Running
 
