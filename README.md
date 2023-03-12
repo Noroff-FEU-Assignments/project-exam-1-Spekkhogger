@@ -17,6 +17,8 @@ The blogposts are dynamically created when items in the archive are clicked. The
 
 The page and URL is hosted by Netlify. 
 
+[Link to page](https://resilient-creponne-254619.netlify.app/index.html)
+
 
 ### Built with
 - HTML
@@ -27,12 +29,16 @@ The page and URL is hosted by Netlify.
 ## Getting started
 ### Installing
 1. Clone the repo: 
+```
 https://github.com/Noroff-FEU-Assignments/project-exam-1-Spekkhogger.git
+```
 
 ### Running
+Open with live server or visit page in webbrowser 
 
-## Contributing 
-
+## Acknowledgment
+Images from pexels.com
+Icons from fontawesome.com
 
 ## Contact 
 Feel free to contact me through LinkedIn 
