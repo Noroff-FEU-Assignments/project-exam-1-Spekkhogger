@@ -38,6 +38,7 @@ Open with live server or visit page in webbrowser
 
 ## Acknowledgment
 Images from pexels.com
+
 Icons from fontawesome.com
 
 ## Contact 
